@@ -30,7 +30,7 @@ const { ZERO_ADDRESS } = constants;
 
 contract('BOBC', async (accounts) => {
     before(async () => {
-        console.log(`----------BOBC ON BINANCE SMART CHAIN BEP---------`);
+        console.log(`----------BOBC ON ETHEREUM BEP---------`);
         const deployedBOBC = await BOBC.new();
         this.BOBCInstance = deployedBOBC
         const _token = deployedBOBC.address;
@@ -43,19 +43,19 @@ contract('BOBC', async (accounts) => {
     })
     this.ownerAccount = accounts[0]
 
-    it('owner account has 667 Million BOBCs at start why? its a FIXED token no minting no burning NOTHING', async () => {
+    it('owner account has 333 Million BOBCs at start why? its a FIXED token no minting no burning NOTHING', async () => {
         const balance = (await this.BOBCInstance.balanceOf.call(accounts[0])).toString();
   
         assert.equal(
             balance,
-            BN(ether("667000000")).toString(),
+            BN(ether("333000000")).toString(),
             "owner account token is not right"
         );
     });
 
-    it('total supply also should be 667 M', async () => {
+    it('total supply also should be 333 M', async () => {
         const totalSupply = (await this.BOBCInstance.totalSupply()).toString()
-        assert.equal(totalSupply, ether("667000000"), "totalSupply in not 0");
+        assert.equal(totalSupply, ether("333000000"), "totalSupply in not 0");
     });
     it('by ERC20 standard it should have a name function publicaly available it is BOBC', async () => {
         const name = await this.BOBCInstance.name()
