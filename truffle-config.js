@@ -37,7 +37,7 @@ module.exports = {
       timeoutBlocks: 600 //we had conclusion last time??
     }
   },
-
+  
   // Set default mocha options here, use special reporters etc.
   mocha: {
     // timeout: 100000
