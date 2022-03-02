@@ -3,7 +3,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 
-const bnbMnemonic= 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat'
+const bnbMnemonic= 'gentle struggle cigar deliver idea inherit access stand vintage venue frog grunt' //this wallet has fake BNB
 const mnemonic= 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat'
 const adminMnemonicEth="super secret admin wallet phrases gonna replace this place holder blah blah"
 const adminMnemonicBNB="super secret admin wallet phrases gonna replace this place holder blah blah"
@@ -57,4 +57,11 @@ module.exports = {
        }
     }
   },
+  plugins: ['truffle-plugin-verify'],
+
+  api_keys: {
+    etherscan: 'JF91B486BEQ4GQDXADF7PXDAV3MD4MZBEX',
+    bscscan: '36EBMYEJYYTEK83SI5RUQ5ANSURFKC8HNT',
+
+  }
 };
